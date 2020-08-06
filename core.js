@@ -418,12 +418,8 @@ Area.canvas.onmousemove = function(e) {
     }
   }
 }
-Area.inUpdate()
-try {
-  throw TypeError('Area.inUpdate', 'core.js', 421)
-}
-catch(e) {
-  e = "taco"
+if(Area.inUpdate != undefined) {
+  Area.inUpdate()
 }
 Area.clear()
 for (i = 0; i < elements.length; i++) {
