@@ -24,7 +24,7 @@ Létrehozás:
 width, height nyilványvaló. A src szín, ha kép típusú akkor kép forrása.x,y elhelyezkedés. spX, spY pedig a sebesség x és y irányban. type pedig a típus. Ez lehet:
 - none(nem adsz meg semmit)
 - image(kép)
-### Benne lévő értékek:
+#### Benne lévő értékek:
 ```
 display: default-ban igaz. Ha hamis nem jelenik meg az objektum
 name: objektum neve. default-ban undefined.
@@ -34,7 +34,7 @@ crashWith: konyha nyelven szilárd-e az objektum. Ha igen többi objektum megaka
 anchored: Ha igaz nem hat az objektumra a gravitáció. Default-ban hamis.
 transparency: Átlászoság. Minél kissebb annál átlászobb. Legkisseb érték 0, maximum érték 1. Default az 1.
 ```
-### Események(Events):
+#### Események(Events):
 ```
 onTouch: Ha egy másik objektum megérinti, akkor megadod function lefutt benne.
 onMouseHover: Ha rá megy az egér lefutt a benne lévő function.
