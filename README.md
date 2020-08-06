@@ -1,5 +1,5 @@
 # KGame Motor
-A KGame egy 2D-s motor.
+A KGame egy 2D-s motor, ami HTML Canvas-t használ.
 ### Jelenlegi verzió
 2020.08
 ### Használat
@@ -7,6 +7,14 @@ Szükséges a használhathoz a **core.js** fájl. Electron-nal ajánlott engine 
 # Dokumentáció
 Használati útmutató a KGame-hez
 **Olyanok vannak megemlítve amit játék fejlesztés közben valószínüleg használva lesznek**
+### run function
+A játék indító eleme. Ezzel indítod el magát a futást. A body-ban az onload-on belül van.
+Pontosabban a function:
+> run(width, height, gravity, devmode)
+#### Ez mit is jelent?
+- width, height = Canvas mérete
+- gravity = Gravitáció mértéke canvas-ban
+- devmode = fejlesztő üzemmód. Nem kötelező bele írni, default az false. 
 ### Area objektum
 Tartalmazza:
 ```
