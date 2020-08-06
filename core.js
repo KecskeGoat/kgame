@@ -45,7 +45,7 @@ var Area = {
 
 
 }
-function component(width, height, src, x, y,spX, spY, type) {
+function object(width, height, src, x, y,spX, spY, type) {
     this.type = type
     this.src = src
 
