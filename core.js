@@ -205,6 +205,7 @@ function gui(width, height, src, x, y, type) {
   this.transparency = 1
   this.x = x
   this.y = y
+  this.align = "start"
 
 
   //Events
@@ -226,6 +227,7 @@ function gui(width, height, src, x, y, type) {
     }else if(type == "text"){
       ctx.font = this.src
       ctx.fillStyle = this.textcolor
+      ctx.textAlign = this.align
       ctx.fillText(this.text, this.x, this.y)
       }
       else if(type == "contain-text") {
@@ -234,7 +236,8 @@ function gui(width, height, src, x, y, type) {
         ctx.fillRect(this.x, this.y, this.width, this.height);
         ctx.font = this.style
         ctx.fillStyle = this.textcolor
-        ctx.fillText(this.text, this.x+this.width/4, this.y+this.height/2)
+        ctx.textAlign = "center"
+        ctx.fillText(this.text, this.x+this.width/2, this.y+this.height/2)
 
 
       }
@@ -260,7 +263,32 @@ function gui(width, height, src, x, y, type) {
   }
 
 }
-function getComponentByName(name) {
+
+function locationObject(x,y) {
+  this.x = x
+  this.y = y
+  this.width = 1
+  this.height = 1
+}
+/*
+function moveTo(that, there, spX, spY) {
+  if(that.x != there.x && that.y != there.y) {
+    if(that.x < there.x) {
+      that.x -= spX
+    }
+    else {
+      that.x += spX
+    }
+    if(that.y < there.y) {
+      that.y -= spY
+    }
+    else {
+      that.y += spY
+    }
+  }
+}
+*/
+function getObjectByName(name) {
   var i = 0;
   for (i = 0; i < elements.length; i++) {
     if(elements[i].name === name) {
@@ -271,7 +299,7 @@ function getComponentByName(name) {
   return false
 }
 
-function getComponentById(id) {
+function getObjectById(id) {
   var i = 0;
   for (i = 0; i < elements.length; i++) {
     if(elements[i].id === id) {
@@ -390,12 +418,12 @@ Area.canvas.onmousemove = function(e) {
     }
   }
 }
-
+Area.inUpdate()
 try {
-  Area.inUpdate()
+  throw TypeError('Area.inUpdate', 'core.js', 421)
 }
-catch(err) {
-  throw err
+catch(e) {
+  e = "taco"
 }
 Area.clear()
 for (i = 0; i < elements.length; i++) {

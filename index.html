@@ -22,14 +22,16 @@
    // floor.onMouseHover = function() {return floor.y += 10}
    //floor.onMouseHoverEnd = function() {return floor.y -= 10}
 
-    var cube = new object(50, 50, "red", 50, 50, 0,0,)
+    var cube = new object(50, 50, "red", 50, 150, 0,0,)
     cube.name = "player"
+   /* var mygui = new gui(100, 100, "yellow", 50, 150, "contain-text")
+    mygui.text = "bruh" */ 
     Area.inUpdate = function() {
     if (Area.key && Area.key == 37) {balra() }
     if (Area.key && Area.key == 39) {jobbra() }
     if (Area.key && Area.key == 38) {fel() }
     if (Area.key && Area.key == 40) {le() }
-    }
+    } 
 
     function fel() {
         cube.y -= 3
@@ -42,8 +44,7 @@
     }
     function le() {
         cube.y += 3
-    }
-
+    } 
     //cube.destroy()
     //cube.anchored = true
     //var buff = new sound("https://www.w3schools.com/graphics/bounce.mp3")
@@ -59,9 +60,11 @@
 
 
 </script>
+
 <button onclick="fel()">fel</button> <br />
 <button onclick="balra()">balra</button> 
 <button onclick="jobbra()">jobbra</button> <br />
 <button onclick="le()">le</button>
+
 </body>
 </html>
