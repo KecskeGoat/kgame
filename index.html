@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KGame 2D engine</title>
+    <script src="core.js"></script>
+    <style>
+        canvas {
+            border:1px solid #d3d3d3;
+            background-color: #f1f1f1;
+        }
+        </style>
+</head>
+<body onload="run(480, 270, 0, false)">  
+    <h1 id="name">KGame 2D engine</h1>
+
+<script>
+    //width, height, src, x, y,spX, spY, type
+    var floor = new component(1000, 1000, "green", 0, 0, 0,0)
+    floor.name = "grass"
+   // floor.onMouseHover = function() {return floor.y += 10}
+   //floor.onMouseHoverEnd = function() {return floor.y -= 10}
+
+    var cube = new component(50, 50, "red", 50, 50, 0,0,)
+    cube.name = "player"
+    Area.inUpdate = function() {
+    if (Area.key && Area.key == 37) {balra() }
+    if (Area.key && Area.key == 39) {jobbra() }
+    if (Area.key && Area.key == 38) {fel() }
+    if (Area.key && Area.key == 40) {le() }
+    }
+
+    function fel() {
+        cube.y -= 3
+    }
+    function balra() {
+        cube.x -= 3
+    }
+    function jobbra() {
+        cube.x += 3
+    }
+    function le() {
+        cube.y += 3
+    }
+
+    //cube.destroy()
+    //cube.anchored = true
+    //var buff = new sound("https://www.w3schools.com/graphics/bounce.mp3")
+
+
+  //  cube.onMouseHoverEnd = function() {return cube.src = "red"}
+
+
+    /*var gui = new gui(50, 50, "https://www.w3schools.com/images/colorpicker.gif", 100, 100, "image")
+    gui.onMouseHover = function() {return console.log("are ya winning son?")}
+    gui.onMouseHoverEnd = function() {return console.log("yes, dad")}
+    gui.onMouseClick = function() {return buff.play()}*/
+
+
+</script>
+<button onclick="fel()">fel</button> <br />
+<button onclick="balra()">balra</button> 
+<button onclick="jobbra()">jobbra</button> <br />
+<button onclick="le()">le</button>
+</body>
+</html>
