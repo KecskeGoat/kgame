@@ -46,6 +46,6 @@ transparency: Átlászoság. Minél kissebb annál átlászobb. Legkisseb érté
 ```
 onTouch: Ha egy másik objektum megérinti, akkor megadod function lefutt benne.
 onMouseHover: Ha rá megy az egér lefutt a benne lévő function.
-onMouseHoverEnd: Ha elhagya az egér lefutt a benne lévő function.
+onMouseHoverEnd: Ha elhagyja az egér lefutt a benne lévő function.
 onMouseClick: Ha rá kattintanak lefutt a benne lévő function.
 ```
