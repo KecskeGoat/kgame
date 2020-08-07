@@ -58,7 +58,7 @@ destroy(): elpusztítja az objektumot
 changeImage(src): Megváltoztatja képet a src-ra, ha image típusú objektumról van szó.
 ```
 ### GUI objektum
-A GUI *Grafical User Interface* rövidítése. A GUI-ban hasonló módon megtudunk kockákat, képeket jelentiteni, mint egy sima object-ben. Csak, hogy GUI-k külön vannak kezelve, nem hat rájük a fizika, nem tárgyak, nem lépnek kapcsolatba a rendes object-ekkel.
+A GUI *Grafical User Interface* rövidítése. A GUI-ban hasonló módon megtudunk kockákat, képeket jelentiteni, mint egy sima object-ben, csakhogy GUI-k külön vannak kezelve, nem hat rájük a fizika, nem tárgyak, nem lépnek kapcsolatba a rendes object-ekkel.
 Létrehozzása:
 > new gui(width, height, src, x,y, type)
 #### Típusai
