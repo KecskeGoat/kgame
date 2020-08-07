@@ -66,3 +66,8 @@ Létrehozzása:
 - image
 - text(szöveg)
 - contain-text(Egy színes kocka, amit közepén szöveg van)
+A none ls image ugyan olyan mondom mükődik, mint a rendes object-nél. **Ajánlott elkerülni a text és contain-text használatát, ajánlott image-t használni helyette**
+### text esetében:
+akkor a src a HTML Canvas-nál használt font-nak kell lennie(x mennyiségű pixel és font family)
+Default:
+> src = "30px Georgia"
