@@ -24,6 +24,8 @@ clear: kitisztitja a képernyőt
 ```
 #### inUpdate
 Az inUpdate-ban megadott function minden új frame-ben lefutt
+### onKeyDown
+Ha valamelyik billentyű le érintődik, akkor lefut a benne lévő function 
 ### object
 Egy alap objektum. Lehet vele képeket megjeleníteni, színeket. Érvényes rá a gravítáció és egyéb elemek. Ha GUI után kutatsz keresd a **gui** objectumot
 Létrehozás: 
@@ -38,9 +40,10 @@ display: default-ban igaz. Ha hamis nem jelenik meg az objektum
 name: objektum neve. default-ban undefined.
 id: objemtum id-e
 AreaGravity: default-ban true. Át vegye-e az Area gravitációs értékeit
-crashWith: konyha nyelven szilárd-e az objektum. Ha igen többi objektum megakad rajta. Default-ban igaz.
+crashWith: konyha nyelven szilárd-e az objektum. Ha igen többi objektum megakad rajta, és Ő is a többiben. Default-ban igaz.
 anchored: Ha igaz nem hat az objektumra a gravitáció. Default-ban hamis.
 transparency: Átlászoság. Minél kissebb annál átlászobb. Legkisseb érték 0, maximum érték 1. Default az 1.
+crash: Éppen be van-e akadva valamelyik objektumban. Ha igen true, ha nem false.
 ```
 #### Események(Events):
 ```
