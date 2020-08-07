@@ -24,7 +24,7 @@ clear: kitisztitja a képernyőt
 ```
 #### inUpdate
 Az inUpdate-ban megadott function minden új frame-ben lefutt
-### onKeyDown
+#### onKeyDown
 Ha valamelyik billentyű le érintődik, akkor lefut a benne lévő function 
 ### object
 Egy alap objektum. Lehet vele képeket megjeleníteni, színeket. Érvényes rá a gravítáció és egyéb elemek. Ha GUI után kutatsz keresd a **gui** objectumot
@@ -52,3 +52,10 @@ onMouseHover: Ha rámegy az egér lefut a benne lévő function.
 onMouseHoverEnd: Ha elhagyja az egér lefut a benne lévő function.
 onMouseClick: Ha rá kattintanak lefut a benne lévő function.
 ```
+#### Benne lévő function-ok:
+```
+destroy(): elpusztítja az objektumot
+changeImage(src): Megváltoztatja képet a src-ra, ha image típusú objektumról van szó.
+```
+### GUI objektum
+A GUI *Grafical User Interface* rövidítése. A GUI-ban hasonló módon megtudunk kockákat, képeket jelentiteni, mint egy sima object-ben. Csak, hogy GUI-k külön vannak kezelve, nem hat rájük a fizika, nem tárgyak, nem lépnek kapcsolatba a rendes object-ekkel.
