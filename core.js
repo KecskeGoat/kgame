@@ -30,6 +30,9 @@ var Area = {
         this.interval = setInterval(newFrame, 20);        
         window.addEventListener('keydown', function (e) {
           Area.key = e.keyCode;
+          if(this.onKeyDown != undefined) {
+            this.onKeyDown()
+          }
       })
       window.addEventListener('keyup', function (e) {
           Area.key = false;
@@ -40,7 +43,8 @@ var Area = {
       clearInterval(this.interval);
     },
     clear : function() {
-        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        //this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        this.canvas.width = this.canvas.width
       }
 
 
@@ -150,8 +154,9 @@ function object(width, height, src, x, y,spX, spY, type) {
       }
     }
   this.changeImage = function(src) {
+    if(this.type == "image") {
     this.image.src = src;
-  }
+  }}
 
   this.unpush = function() {
     const index = elements.indexOf(this);
@@ -184,7 +189,6 @@ function sound(src) {
 function gui(width, height, src, x, y, type) {
   this.type = type
   this.src = src
-
   if (type == "image") {
     this.image = new Image();
     this.image.src = this.src;
@@ -304,6 +308,27 @@ function getObjectById(id) {
   for (i = 0; i < elements.length; i++) {
     if(elements[i].id === id) {
       return elements[i]
+    }
+
+  }
+  return false
+}
+function getGUIByName(name) {
+  var i = 0;
+  for (i = 0; i < guis.length; i++) {
+    if(guis[i].name === name) {
+      return guis[i]
+    }
+
+  }
+  return false
+}
+
+function getGUIById(id) {
+  var i = 0;
+  for (i = 0; i < guis.length; i++) {
+    if(guis[i].id === id) {
+      return guis[i]
     }
 
   }
