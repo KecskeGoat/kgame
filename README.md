@@ -67,7 +67,20 @@ Létrehozzása:
 - text(szöveg)
 - contain-text(Egy színes kocka, amit közepén szöveg van)
 A none ls image ugyan olyan mondom mükődik, mint a rendes object-nél. **Ajánlott elkerülni a text és contain-text használatát, ajánlott image-t használni helyette**
-### text esetében:
+#### text esetében:
 akkor a src a HTML Canvas-nál használt font-nak kell lennie(x mennyiségű pixel és font family)
 Default:
 > src = "30px Georgia"
+align segítségével(gui.align) betudod állítani hol legyen a text(default az "start")
+text-el a szöveget
+textcolor-al a színt
+#### contain-text esetében:
+Itt a src a alap kocka színe
+Ugyan azok-at lehet beállítani, csak align-t nem lehet + font-ot textstyle-al lehet beállítani
+#### Események:
+```
+onMouseHover: Ha rámegy az egér lefut a benne lévő function.
+onMouseHoverEnd: Ha elhagyja az egér lefut a benne lévő function.
+onMouseClick: Ha rá kattintanak lefut a benne lévő function.
+```
+A benne lévő function-ok ugyan azok, mint az sima object-eknél
