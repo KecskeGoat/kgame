@@ -149,7 +149,6 @@ function object(width, height, src, x, y,spX, spY, type) {
               crash = false
               
             }
-            if(this.y > otherobj.y) {crash = false}
                     return crash;
       }
     }
