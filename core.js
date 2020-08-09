@@ -1,5 +1,6 @@
 var elements = []
 var guis = []
+const VERSION = "2020.08"
 function mouseObject(x,y) {
   this.x = x
   this.y = y
@@ -10,7 +11,6 @@ function mouseObject(x,y) {
 function run(w, h, gravity, devmode) {
     devmode === undefined ? devmode = false : devmode = devmode
     Area.start(w, h, gravity, devmode)
-
     if(devmode === true) {
       DevModeOn()
     }

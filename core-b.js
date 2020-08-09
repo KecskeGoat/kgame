@@ -1,5 +1,6 @@
 var elements = []
 var guis = []
+const VERSION = "2020.08b-dev"
 function mouseObject(x,y) {
   this.x = x
   this.y = y
@@ -81,7 +82,18 @@ function object(width, height, src, x, y,spX, spY, type) {
       this.onMouseHover = undefined
       this.onMouseHoverEnd = undefined
       this.onMouseClick = undefined
+      this.onMove = undefined
 
+      //Decison tree stuff
+      this.states = []
+      this.state = undefined
+      this.changeState = function(num) {
+        this.state = this.states[num]
+      }
+      this.getStateNum = function (state) {
+        return elements.indexOf(state);
+
+      }
     if(this.AreaGravity === true) {
       this.gravity = 0
     }
@@ -104,6 +116,9 @@ function object(width, height, src, x, y,spX, spY, type) {
       this.x += this.spX
       this.spY += this.gravitySpeed 
       this.y += this.spY
+      if(spY != 0 && this.onMove != undefined || spX != 0 && this.onMove != undefined) {
+        this.onMove()
+      }
       if(this.display === true ) {
       if (type == "image") {
         
@@ -170,7 +185,11 @@ function object(width, height, src, x, y,spX, spY, type) {
     delete this
   }
 }
-
+function state(key, goalvalue, effect) {
+  this.key = key
+  this.goalvalue = goalvalue
+  this.effect = effect
+}
 function sound(src) {
   this.sound = document.createElement("audio");
   this.sound.src = src;
